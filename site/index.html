@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  EURLYNE JEANNIS — site public autonome
+  URL cible : https://eurlyne.kairexkit.com/   (domaine kairexkit.com, Namecheap)
+  ----------------------------------------------------------------------------
+  RÈGLE D'ISOLATION (ne pas enfreindre) :
+  Entité entièrement séparée de CyberDre — domaine distinct, identité visuelle
+  distincte, canal de contact distinct. Aucun lien, logo, couleur, email,
+  formulaire ni mention CyberDre ne doit figurer sur cette page.
+  ----------------------------------------------------------------------------
+  !! À REMPLACER AVANT MISE EN LIGNE !!
+    1. EMAIL           -> chercher "contact@eurlyne-jeannis.com" (3 occurrences)
+    2. LINKEDIN        -> chercher "LINKEDIN_URL"
+    3. ÉTUDES DE CAS   -> section "portfolio", blocs marqués [À COMPLÉTER]
+  ============================================================================
+-->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eurlyne Jeannis — Gouvernance IA &amp; Cybersécurité</title>
+<meta name="description" content="Consultante indépendante en gouvernance de l'IA et cybersécurité produit : conformité CRA, PSIRT, SBOM, AgentOps et automatisation de systèmes d'agents.">
+<link rel="canonical" href="https://eurlyne.kairexkit.com/">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Eurlyne Jeannis">
+<meta property="og:title" content="Eurlyne Jeannis — Gouvernance IA &amp; Cybersécurité">
+<meta property="og:description" content="Gouvernance de l'IA, CRA / PSIRT / SBOM, AgentOps et automatisation. Conseil et mise en œuvre.">
+<meta property="og:url" content="https://eurlyne.kairexkit.com/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23141209'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='18' fill='%23C4551F' text-anchor='middle'%3EEJ%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Eurlyne Jeannis",
+  "url": "https://eurlyne.kairexkit.com/",
+  "jobTitle": "Consultante Gouvernance IA & Cybersécurité",
+  "email": "mailto:contact@eurlyne-jeannis.com",
+  "knowsAbout": [
+    "Gouvernance de l'IA",
+    "EU AI Act",
+    "Cyber Resilience Act",
+    "PSIRT",
+    "SBOM",
+    "AgentOps",
+    "Automatisation",
+    "n8n",
+    "LangChain",
+    "Model Context Protocol",
+    "Supabase"
+  ]
+}
+</script>
+
+<style>
+/* ── Système ────────────────────────────────────────────────────────────── */
+:root{
+  --bone:#F3EFE6;
+  --bone-2:#FAF7F0;
+  --ink:#16140D;
+  --ink-soft:#4E4938;
+  --ink-faint:#837B64;
+  --rule:#D8D0BC;
+  --oxide:#B0451A;
+  --oxide-deep:#8A3312;
+  --pine:#1E4436;
+
+  --bg:var(--bone);
+  --surface:var(--bone-2);
+  --fg:var(--ink);
+  --fg-soft:var(--ink-soft);
+  --fg-faint:var(--ink-faint);
+  --line:var(--rule);
+  --accent:var(--oxide);
+  --accent-2:var(--pine);
+
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Archivo","Helvetica Neue",Helvetica,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --gut:clamp(20px,5vw,72px);
+  --max:1180px;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#121009;
+    --surface:#1A1710;
+    --fg:#F1ECDF;
+    --fg-soft:#B8B09A;
+    --fg-faint:#8A836E;
+    --line:#2E2A1F;
+    --accent:#E0703C;
+    --accent-2:#6DA88F;
+  }
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:var(--body);
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+/* grain */
+body::after{
+  content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;
+  opacity:.055;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@media (prefers-color-scheme:dark){body::after{mix-blend-mode:screen;opacity:.04}}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.02em;margin:0}
+p{margin:0}
+
+.mono{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase}
+
+/* ── Entrée ─────────────────────────────────────────────────────────────── */
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.rise{animation:rise .85s cubic-bezier(.2,.7,.2,1) both}
+
+/* Entrée échelonnée au chargement. Volontairement sans JS ni scroll-timeline :
+   le contenu reste visible en impression, en capture et si l'animation ne s'exécute pas. */
+.rv{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.rv:nth-child(2){animation-delay:.07s}
+.rv:nth-child(3){animation-delay:.14s}
+.rv:nth-child(4){animation-delay:.21s}
+.rv:nth-child(5){animation-delay:.28s}
+@media (prefers-reduced-motion:reduce){
+  .rise,.rv{animation:none}
+}
+
+/* ── Barre ──────────────────────────────────────────────────────────────── */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.mark{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.mark b{font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:-.03em}
+.mark span{color:var(--fg-faint)}
+.navlinks{display:flex;gap:26px}
+.navlinks a{color:var(--fg-soft);text-decoration:none;transition:color .2s}
+.navlinks a:hover{color:var(--accent)}
+@media (max-width:760px){.navlinks{display:none}}
+
+/* ── Hero ───────────────────────────────────────────────────────────────── */
+.hero{padding:clamp(56px,11vw,132px) 0 clamp(44px,7vw,84px);position:relative}
+.hero::before{
+  content:"";position:absolute;inset:auto 0 0 0;height:1px;background:var(--line);
+}
+.dossier{display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--fg-faint);margin-bottom:clamp(26px,5vw,48px)}
+.dossier em{font-style:normal;color:var(--accent)}
+
+h1{
+  font-size:clamp(46px,10.5vw,116px);
+  line-height:.9;
+  font-variation-settings:"SOFT" 0,"WONK" 1;
+  margin-bottom:clamp(20px,3.5vw,34px);
+}
+h1 .ln{display:block}
+h1 .ln:last-child{color:var(--accent);font-style:italic;font-weight:300;padding-left:.09em}
+
+.lede{
+  max-width:60ch;font-size:clamp(17px,2.1vw,21px);line-height:1.55;color:var(--fg-soft);
+  border-left:2px solid var(--accent);padding-left:clamp(16px,2.4vw,26px);
+}
+.lede strong{color:var(--fg);font-weight:600}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:clamp(28px,4vw,40px)}
+.chip{
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid var(--line);border-radius:999px;padding:7px 14px;color:var(--fg-soft);
+  background:var(--surface);transition:border-color .25s,color .25s,transform .25s;
+}
+.chip:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(30px,4.5vw,44px)}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;text-decoration:none;
+  font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  padding:14px 24px;border:1px solid var(--fg);transition:.25s;
+}
+.btn-solid{background:var(--fg);color:var(--bg)}
+.btn-solid:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn-ghost{color:var(--fg)}
+.btn-ghost:hover{background:var(--fg);color:var(--bg)}
+.btn .arw{transition:transform .25s}
+.btn:hover .arw{transform:translateX(4px)}
+
+/* ── Sections ───────────────────────────────────────────────────────────── */
+section{padding:clamp(56px,8.5vw,110px) 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:clamp(32px,5vw,56px);flex-wrap:wrap}
+.sec-num{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.16em}
+.sec-head h2{font-size:clamp(28px,4.6vw,46px);line-height:1.05}
+.sec-head .note{margin-left:auto;max-width:36ch;color:var(--fg-faint);font-size:14.5px;line-height:1.5}
+@media (max-width:860px){.sec-head .note{margin-left:0;max-width:none}}
+
+/* ── Expertise ──────────────────────────────────────────────────────────── */
+.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.cell{background:var(--bg);padding:clamp(24px,3vw,34px);display:flex;flex-direction:column;gap:14px;transition:background .3s}
+.cell:hover{background:var(--surface)}
+.cell .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
+.cell h3{font-size:22px;line-height:1.2}
+.cell p{color:var(--fg-soft);font-size:15px;line-height:1.6}
+.cell ul{margin:2px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.cell li{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--fg-faint);border:1px solid var(--line);padding:4px 8px}
+
+/* ── Portfolio ──────────────────────────────────────────────────────────── */
+.folio{display:flex;flex-direction:column}
+.item{
+  display:grid;grid-template-columns:76px 1fr 220px;gap:clamp(16px,3vw,38px);
+  padding:clamp(24px,3.4vw,38px) 0;border-top:1px solid var(--line);
+  align-items:start;position:relative;transition:padding-left .35s;
+}
+.item:last-child{border-bottom:1px solid var(--line)}
+.item::before{
+  content:"";position:absolute;left:0;top:-1px;height:1px;width:0;background:var(--accent);transition:width .55s cubic-bezier(.2,.7,.2,1);
+}
+.item:hover::before{width:100%}
+.item:hover{padding-left:10px}
+@media (max-width:860px){.item{grid-template-columns:1fr;gap:14px}.item:hover{padding-left:0}}
+
+.item .idx{font-family:var(--mono);font-size:12px;color:var(--accent);padding-top:7px;letter-spacing:.1em}
+.item h3{font-size:clamp(21px,2.8vw,28px);line-height:1.15;margin-bottom:10px}
+.item .desc{color:var(--fg-soft);font-size:15.5px;max-width:58ch}
+.item .out{
+  margin-top:14px;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;
+  color:var(--accent-2);text-transform:none;
+}
+.item .stack{display:flex;flex-wrap:wrap;gap:6px;padding-top:8px}
+.item .stack span{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--fg-faint);
+  border:1px solid var(--line);padding:4px 8px;background:var(--surface);
+}
+.todo{
+  display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;
+  background:var(--accent);color:#fff;padding:3px 7px;margin-bottom:8px;
+}
+
+/* ── Méthode ────────────────────────────────────────────────────────────── */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:clamp(22px,3vw,38px);counter-reset:s}
+.step{position:relative;padding-top:24px;border-top:2px solid var(--fg)}
+.step .n{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--accent);margin-bottom:10px;display:block}
+.step h3{font-size:19px;margin-bottom:8px}
+.step p{color:var(--fg-soft);font-size:14.5px;line-height:1.6}
+
+/* ── Contact ────────────────────────────────────────────────────────────── */
+.contact{border-bottom:0}
+.contact-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(30px,5vw,68px);align-items:start}
+@media (max-width:880px){.contact-grid{grid-template-columns:1fr}}
+.contact h2{font-size:clamp(32px,5.4vw,58px);line-height:1;margin-bottom:20px}
+.contact .big{font-size:clamp(17px,2vw,20px);color:var(--fg-soft);max-width:44ch;margin-bottom:26px}
+.mailto{
+  font-family:var(--display);font-size:clamp(19px,2.6vw,27px);color:var(--accent);
+  text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px;
+  display:inline-block;transition:opacity .2s;word-break:break-all;
+}
+.mailto:hover{opacity:.72}
+.meta{margin-top:26px;display:flex;flex-direction:column;gap:7px;color:var(--fg-faint)}
+
+form{background:var(--surface);border:1px solid var(--line);padding:clamp(22px,3vw,32px);display:flex;flex-direction:column;gap:16px}
+label{display:flex;flex-direction:column;gap:7px}
+label .lb{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-faint)}
+input,textarea,select{
+  font-family:var(--body);font-size:15px;color:var(--fg);background:var(--bg);
+  border:1px solid var(--line);padding:11px 13px;border-radius:0;transition:border-color .2s;
+}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent)}
+textarea{resize:vertical;min-height:112px}
+button[type=submit]{
+  font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  background:var(--fg);color:var(--bg);border:1px solid var(--fg);padding:14px 20px;cursor:pointer;transition:.25s;
+}
+button[type=submit]:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.hp{position:absolute;left:-9999px}
+.legal{font-size:12.5px;color:var(--fg-faint);line-height:1.5}
+
+/* ── Pied ───────────────────────────────────────────────────────────────── */
+footer{padding:34px 0 46px}
+.foot{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;justify-content:space-between;color:var(--fg-faint)}
+.foot a{color:var(--fg-soft);text-decoration:none}
+.foot a:hover{color:var(--accent)}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="mark" href="#top"><b>Eurlyne&nbsp;Jeannis</b><span class="mono">EJ</span></a>
+    <nav class="navlinks mono">
+      <a href="#expertise">Expertise</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#methode">Méthode</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ══ HERO ══ -->
+  <div class="hero">
+    <div class="wrap">
+      <div class="dossier mono rise" style="animation-delay:.05s">
+        <span>Conseil indépendant</span>
+        <span><em>—</em> Gouvernance IA &amp; Sécurité produit</span>
+        <span><em>—</em> FR / EN</span>
+      </div>
+
+      <h1 class="rise" style="animation-delay:.14s">
+        <span class="ln">Gouverner</span>
+        <span class="ln">l'IA avant</span>
+        <span class="ln">qu'elle vous</span>
+        <span class="ln">gouverne.</span>
+      </h1>
+
+      <p class="lede rise" style="animation-delay:.26s">
+        Je rends les systèmes d'IA <strong>auditables, conformes et exploitables en production</strong>.
+        Gouvernance, sécurité produit (CRA, PSIRT, SBOM) et opérations d'agents —
+        du cadrage réglementaire jusqu'au code qui tourne.
+      </p>
+
+      <div class="chips rise" style="animation-delay:.36s">
+        <span class="chip">AI Governance</span>
+        <span class="chip">CRA</span>
+        <span class="chip">PSIRT</span>
+        <span class="chip">SBOM</span>
+        <span class="chip">AgentOps</span>
+        <span class="chip">MCP</span>
+        <span class="chip">n8n</span>
+        <span class="chip">LangChain</span>
+        <span class="chip">Supabase</span>
+      </div>
+
+      <div class="cta-row rise" style="animation-delay:.46s">
+        <a class="btn btn-solid" href="#contact">Démarrer un échange <span class="arw">→</span></a>
+        <a class="btn btn-ghost" href="#portfolio">Voir le portfolio</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ EXPERTISE ══ -->
+  <section id="expertise">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">01</span>
+        <h2>Quatre terrains,<br>une seule logique.</h2>
+        <p class="note">La conformité ne vaut que si elle est instrumentée. Chaque mission produit des artefacts vérifiables, pas des diapositives.</p>
+      </div>
+
+      <div class="grid-4">
+        <article class="cell rv">
+          <span class="k">A — Gouvernance</span>
+          <h3>Gouvernance de l'IA</h3>
+          <p>Cartographie des systèmes, classification des risques, politiques d'usage, traçabilité des modèles et des données, comitologie et preuve d'audit.</p>
+          <ul><li>AI Act</li><li>Registre modèles</li><li>Évaluation risques</li><li>Model cards</li></ul>
+        </article>
+
+        <article class="cell rv">
+          <span class="k">B — Sécurité produit</span>
+          <h3>CRA · PSIRT · SBOM</h3>
+          <p>Mise en conformité Cyber Resilience Act : chaîne d'approvisionnement logicielle, génération et maintien de SBOM, processus de divulgation et cellule PSIRT opérationnelle.</p>
+          <ul><li>CycloneDX</li><li>SPDX</li><li>VEX</li><li>CVD</li><li>Vuln. handling</li></ul>
+        </article>
+
+        <article class="cell rv">
+          <span class="k">C — Opérations</span>
+          <h3>AgentOps &amp; automatisation</h3>
+          <p>Passage des agents du prototype à la production : garde-fous, observabilité, évaluations, gestion des coûts, reprise sur erreur et revue humaine aux bons points.</p>
+          <ul><li>Évals</li><li>Traces</li><li>Guardrails</li><li>Human-in-the-loop</li></ul>
+        </article>
+
+        <article class="cell rv">
+          <span class="k">D — Plateforme</span>
+          <h3>Intégration &amp; API</h3>
+          <p>Construction des tuyaux : API, orchestration n8n, chaînes LangChain, serveurs MCP, persistance et droits d'accès sur Supabase.</p>
+          <ul><li>REST</li><li>n8n</li><li>LangChain</li><li>MCP</li><li>Supabase / RLS</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PORTFOLIO ══ -->
+  <section id="portfolio">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">02</span>
+        <h2>Portfolio</h2>
+        <p class="note">Missions types et livrables. Les références nominatives sont communiquées sur demande, sous accord de confidentialité.</p>
+      </div>
+
+      <div class="folio">
+
+        <!-- ▼▼ [À COMPLÉTER] Remplacer par une étude de cas réelle : client, contexte, résultat chiffré. ▼▼ -->
+        <article class="item rv">
+          <span class="idx">P/01</span>
+          <div>
+            <span class="todo">Mission type</span>
+            <h3>Programme de conformité Cyber Resilience Act</h3>
+            <p class="desc">Inventaire des composants tiers, génération automatisée de SBOM à chaque build, cartographie des vulnérabilités avec statut VEX, et rédaction de la documentation technique exigée par le règlement.</p>
+            <p class="out">Livrables → SBOM CycloneDX en CI · registre VEX · dossier technique CRA</p>
+          </div>
+          <div class="stack"><span>CycloneDX</span><span>VEX</span><span>CI/CD</span><span>Supply chain</span></div>
+        </article>
+
+        <article class="item rv">
+          <span class="idx">P/02</span>
+          <div>
+            <span class="todo">Mission type</span>
+            <h3>Mise en place d'une cellule PSIRT</h3>
+            <p class="desc">Définition du processus de divulgation coordonnée, canal de réception sécurisé, grille de triage et SLA de remédiation, modèles d'avis de sécurité et entraînement de l'équipe sur incident simulé.</p>
+            <p class="out">Livrables → politique CVD · runbook de triage · security advisories</p>
+          </div>
+          <div class="stack"><span>PSIRT</span><span>CVD</span><span>CVSS</span><span>Runbooks</span></div>
+        </article>
+
+        <article class="item rv">
+          <span class="idx">P/03</span>
+          <div>
+            <span class="todo">Mission type</span>
+            <h3>Cadre de gouvernance IA d'entreprise</h3>
+            <p class="desc">Recensement des usages d'IA, classification par niveau de risque, politique interne opposable, points de contrôle humain obligatoires et journalisation destinée à l'audit.</p>
+            <p class="out">Livrables → registre des systèmes · matrice de risques · politique d'usage</p>
+          </div>
+          <div class="stack"><span>AI Act</span><span>Risk tiering</span><span>Audit trail</span></div>
+        </article>
+
+        <article class="item rv">
+          <span class="idx">P/04</span>
+          <div>
+            <span class="todo">Mission type</span>
+            <h3>Agents en production — socle AgentOps</h3>
+            <p class="desc">Industrialisation d'agents LLM : jeux d'évaluation versionnés, traces d'exécution, garde-fous en entrée et sortie, plafonds de coût et escalade vers un opérateur humain sur seuil de confiance.</p>
+            <p class="out">Livrables → suite d'évals · tableau de bord de traces · politique de garde-fous</p>
+          </div>
+          <div class="stack"><span>LangChain</span><span>MCP</span><span>Évals</span><span>Observabilité</span></div>
+        </article>
+
+        <article class="item rv">
+          <span class="idx">P/05</span>
+          <div>
+            <span class="todo">Mission type</span>
+            <h3>Automatisation de processus métier</h3>
+            <p class="desc">Orchestration n8n branchée sur les API existantes et sur Supabase : cycles manuels remplacés par des flux traçables, avec reprise sur erreur, journal d'audit et droits d'accès au niveau ligne.</p>
+            <p class="out">Livrables → workflows n8n · schéma Supabase + RLS · documentation d'exploitation</p>
+          </div>
+          <div class="stack"><span>n8n</span><span>Supabase</span><span>API REST</span><span>Webhooks</span></div>
+        </article>
+        <!-- ▲▲ Fin des blocs à remplacer par des cas réels ▲▲ -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MÉTHODE ══ -->
+  <section id="methode">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">03</span>
+        <h2>Comment ça se passe</h2>
+        <p class="note">Séquence courte, jalons visibles. Pas de mission qui s'étire sans livrable.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step rv">
+          <span class="n">Étape 01</span>
+          <h3>Diagnostic</h3>
+          <p>Deux semaines. Inventaire des systèmes, des dépendances et des obligations réelles qui s'appliquent. Sortie : écart constaté, chiffré et priorisé.</p>
+        </div>
+        <div class="step rv">
+          <span class="n">Étape 02</span>
+          <h3>Cadrage</h3>
+          <p>Choix des chantiers par rapport risque/effort. Définition des artefacts attendus et des responsables. Sortie : feuille de route datée.</p>
+        </div>
+        <div class="step rv">
+          <span class="n">Étape 03</span>
+          <h3>Mise en œuvre</h3>
+          <p>Construction avec vos équipes : processus, automatisations, contrôles. Le code et les documents restent chez vous, lisibles et maintenables.</p>
+        </div>
+        <div class="step rv">
+          <span class="n">Étape 04</span>
+          <h3>Transfert</h3>
+          <p>Formation, runbooks, revue à 90 jours. L'objectif est que le dispositif tienne sans moi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div>
+          <span class="sec-num">04</span>
+          <h2>Parlons de<br>votre échéance.</h2>
+          <p class="big">Un texte réglementaire à absorber, des agents à sécuriser, un processus à automatiser. Décrivez le contexte, je réponds sous 48 h ouvrées.</p>
+
+          <!-- !! REMPLACER PAR L'EMAIL DÉFINITIF D'EURLYNE !! -->
+          <a class="mailto" href="mailto:contact@eurlyne-jeannis.com">contact@eurlyne-jeannis.com</a>
+
+          <div class="meta mono">
+            <span>Disponibilité — missions ponctuelles et récurrentes</span>
+            <span>Langues — français, anglais</span>
+            <span>Intervention — à distance, déplacements possibles</span>
+          </div>
+        </div>
+
+        <!-- Netlify Forms : la réception est configurée dans le dashboard Netlify
+             (Forms → Notifications → email d'Eurlyne). Aucun autre destinataire. -->
+        <form class="rv" name="eurlyne-contact" method="POST" data-netlify="true" netlify-honeypot="societe-web" action="?envoye=1">
+          <input type="hidden" name="form-name" value="eurlyne-contact">
+          <p class="hp"><label>Ne pas remplir <input name="societe-web" tabindex="-1" autocomplete="off"></label></p>
+
+          <label>
+            <span class="lb">Nom</span>
+            <input type="text" name="nom" required autocomplete="name">
+          </label>
+          <label>
+            <span class="lb">Email professionnel</span>
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+          <label>
+            <span class="lb">Sujet</span>
+            <select name="sujet">
+              <option>Gouvernance IA</option>
+              <option>CRA / SBOM</option>
+              <option>PSIRT</option>
+              <option>AgentOps</option>
+              <option>Automatisation / intégration</option>
+              <option>Autre</option>
+            </select>
+          </label>
+          <label>
+            <span class="lb">Contexte</span>
+            <textarea name="message" required placeholder="Périmètre, échéance, contraintes."></textarea>
+          </label>
+          <button type="submit">Envoyer <span class="arw">→</span></button>
+          <p class="legal">Les informations transmises servent uniquement à répondre à votre demande. Aucune transmission à un tiers, aucune inscription à une liste de diffusion.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot mono">
+    <span>© <span id="yr">2026</span> Eurlyne Jeannis</span>
+    <span>Gouvernance IA · Cybersécurité · AgentOps</span>
+    <!-- !! REMPLACER LINKEDIN_URL !! -->
+    <a href="LINKEDIN_URL" rel="me noopener">LinkedIn</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Accusé d'envoi Netlify Forms
+  if (new URLSearchParams(location.search).get('envoye') === '1') {
+    var f = document.querySelector('form');
+    if (f) {
+      f.innerHTML = '<p class="lb mono" style="color:var(--accent)">Message reçu</p>' +
+                    '<p style="color:var(--fg-soft)">Réponse sous 48 h ouvrées.</p>';
+      f.scrollIntoView({ block: 'center' });
+    }
+  }
+</script>
+</body>
+</html>
