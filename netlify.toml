@@ -1,0 +1,17 @@
+# Déploiement de la page publique Eurlyne Jeannis.
+# Publish dir = site/  ->  la page est servie sur /eurlyne-jeannis/
+[build]
+  publish = "site"
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Sert /eurlyne-jeannis (sans slash final) sans 404
+[[redirects]]
+  from = "/eurlyne-jeannis"
+  to = "/eurlyne-jeannis/"
+  status = 301
