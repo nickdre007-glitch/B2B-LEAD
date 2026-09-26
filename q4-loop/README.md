@@ -6,10 +6,10 @@ Date : 2026-09-25. Statuts : À faire / En cours / Vérifié / Bloqué.
 
 | Tâche | Statut | Résultat | Preuve | Blocage | Prochaine action |
 |---|---|---|---|---|---|
-| A1 Méthode FR | Bloqué (rédigé) | Correctif rédigé, non intégré | Aucune capture : page inaccessible | cyberdre.co bloqué par proxy réseau ; CMS inconnu ; aucun des 2 sites Wix connectés n'est cyberdre.co | Ouvrir l'accès au domaine ou fournir le CMS |
-| A2 Audit Flash | Bloqué (rédigé) | Deux blocs rédigés, lien Calendly actif confirmé | Lien `calendly.com/nick-cyberdre/cyberdre-pipeline-audit` actif (API Calendly) | Même blocage site | Intégrer les blocs, tester le clic |
+| A1 Méthode FR | Intégré, testé en local, non publié | Texte remplacé dans `fr/method/` ; faute « quonstruisons » corrigée ; variante « qualification et réservation » retirée de `fr/about/` | `preuves/a1-methode-fr.png` ; nickdre007-glitch/cyberdre-site#1 | Aucun | Vérifier l'aperçu Netlify, fusionner |
+| A2 Audit Flash | Intégré, testé en local, non publié | Deux blocs distincts ; texte technique Calendly retiré ; bouton vers `cyberdre-pipeline-audit` contrôlé | `preuves/a2-audit-blocs.png`, `preuves/a2-calendly-cta.png` | Même texte technique encore visible sur 12 autres langues | Fusionner, puis traiter les autres langues |
 | A3 Formulaire | Bloqué (spécifié) | Formulaire réel identifié : Calendly « CyberDre Pipeline Audit » | API : 1 seule question libre actuelle | API Calendly sans écriture des questions | Saisie manuelle dans l'interface Calendly (6 min) |
-| A4 Promesse | Bloqué (rédigé) | Texte + point de départ des 21 jours rédigés | Description Calendly contrôlée : ancienne promesse absente | Site inaccessible pour chercher l'ancienne promesse | Rechercher « 14 jours », « mûrs » sur toutes les pages |
+| A4 Promesse | Vérifié (absence) ; départ du Sprint intégré | Ancienne promesse introuvable dans tout le site ; départ des 21 jours ajouté sur `offers/` | Recherche dans les fichiers du dépôt `cyberdre-site` | « 20 comptes » non ajouté : capacité de livraison à valider | Valider départ Sprint et capacité 20 comptes |
 | A5 Cibles Roumanie | En cours | 19 entreprises retenues sur 30 : déficit de 11 | `05-cibles-roumanie.csv`, 1 URL justificative par ligne | Pages non ouvertes : preuve issue du moteur de recherche uniquement | Ouvrir les 19 URL, confirmer, puis compléter |
 
 ---
